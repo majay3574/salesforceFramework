@@ -1,0 +1,8 @@
+Lightning Experience
+App Launcher is visible as expected.
+Home | Salesforce
+New Button is visible as expected.
+Lead Name is visible as expected.
+Mr. Johanna Runolfsdottir
+Mr. Johanna Runolfsdottir
+Field value verified successfully
