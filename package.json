@@ -1,11 +1,11 @@
 {
-  "name": "expertus_one_playwright",
+  "name": "SalesForce",
   "version": "1.0.0",
   "description": "Playwright Automation for Expertus One",
   "main": "index.js",
   "scripts": {},
   "keywords": [],
-  "author": "Qeagle",
+  "author": "Ajay Michael",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.43.1",
