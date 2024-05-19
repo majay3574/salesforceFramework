@@ -1,7 +1,7 @@
 {
-  "name": "SalesForce",
+  "name": "salesforce",
   "version": "1.0.0",
-  "description": "Playwright Automation for Expertus One",
+  "description": "Playwright Automation for SalesForce",
   "main": "index.js",
   "scripts": {},
   "keywords": [],
