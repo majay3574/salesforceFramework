@@ -10,7 +10,9 @@ constructor(page: Page,context:BrowserContext) {
     this.loadApp(SalesforceLogin.pageUrl);
 }
 public async salesforceLogin(username:string,password:string){
+    await this.maxWait(5000);
     await this.type("#username","Username",username);
+    await this.maxWait(5000);
     await this.type("#password","password",password);
     await this.click("#Login","Sign In","Button");
     await this.validateElementVisibility(".slds-icon-waffle","App Launcher")

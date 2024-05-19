@@ -33,7 +33,11 @@ export class FakerData {
         return `${capitalizeFirstLetter(adjective)} ${capitalizeFirstLetter(noun)} ${capitalizeFirstLetter(verb)}`;
     }
 
-    static getUserId():string {
+    static title():string{
+       return faker.company.buzzPhrase()
+    }
+
+    static getUserNumber():string {
         const currentDate = new Date();
         const milliseconds = currentDate.getTime().toString();
         return milliseconds;
