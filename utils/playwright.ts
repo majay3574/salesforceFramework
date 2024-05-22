@@ -64,7 +64,7 @@ export abstract class PlaywrightWrapper {
         type: string
     ) {
         await test.step(`The ${type} ${name} clicked`, async () => {
-            await this.page.locator(locator).nth(0).click({ force: true });
+            await this.page.locator(locator).click({ force: true });
         });
     }
     async storeState(path: string) {
