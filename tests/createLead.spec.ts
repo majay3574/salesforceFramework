@@ -4,7 +4,10 @@ import {FakerData} from "../utils/fakerUtils"
 let firstName = FakerData.getFirstName()
 test.use({ storageState: "logins/salesforce.json" })
 test(` creating Lead`, async ({SalesforceHomePage,SalesforceLeadPage }) => {
-
+    test.info().annotations.push(
+        { type: 'Author', description: 'Ajay Michael' },
+        { type: 'TestCase', description: 'Creating Lead' },
+         );
 
     await SalesforceHomePage.appLauncher();
     await SalesforceHomePage.viewAll();

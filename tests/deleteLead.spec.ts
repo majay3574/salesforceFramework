@@ -8,6 +8,11 @@ import { test } from "../customFixtures/salesforceFixture";
 test.use({ storageState: "logins/salesforce.json" });
 
 test(`Deleting the LeadID created from an API request`, async ({ SalesforceHomePage, SalesforceLeadPage }) => {
+    test.info().annotations.push(
+        { type: 'Author', description: 'Ajay Michael' },
+        { type: 'TestCase', description: 'Deleting the LeadID created from an API request' }
+    );
+
     const userName = await getLead()
     await SalesforceHomePage.appLauncher();
     await SalesforceHomePage.viewAll();

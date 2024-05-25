@@ -8,7 +8,11 @@ test.use({ storageState: "logins/salesforce.json" });
 
 test('Creating an Account Using CSV Data', async ({ SalesforceHomePage, SalesforceAccountPage }) => {
     const data = await readDataFromCSV(csvFilePath);
-    
+    test.info().annotations.push(
+        { type: 'Author', description: 'Ajay Michael' },
+        { type: 'TestCase', description: 'Creating an Account Using CSV Data' },
+        { type:'Test Description', description:"Creating Valid account for budget calculation"}
+    );
     for (const row of data) {
         const { Rating, Type, Industry, Ownership, BillingStreet, BillingCity, PostalCode, BillingState, BillingCountry } = row;
 

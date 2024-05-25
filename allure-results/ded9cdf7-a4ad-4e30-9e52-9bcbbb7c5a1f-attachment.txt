@@ -1,4 +1,0 @@
-Lightning Experience
-App Launcher is visible as expected.
-Lightning Experience | Salesforce
-New Button is visible as expected.

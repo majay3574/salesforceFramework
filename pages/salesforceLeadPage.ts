@@ -47,7 +47,8 @@ export class SalesforceLeadPage extends SalesforceHomePage {
 
     public async leadID(userName:string){
         await this.spinnerDisappear()
-        await this.click("//a[text()='"+userName+"']",userName,"User Name")
+       // a:text-is('"+userName+"')
+        await this.click("//a[@title='"+userName+"']",userName,"User Name")
     }
 
     public async expandButton(){

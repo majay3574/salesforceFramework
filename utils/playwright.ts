@@ -87,6 +87,7 @@ export abstract class PlaywrightWrapper {
 
     }
     async spinnerDisappear() {
+        this.maxWait(3000)
         const spinner = this.page.locator("//div[@class='slds-spinner_container slds-grid']");
         await expect(spinner).toHaveCount(0);
         console.log("expected element is disabled");
