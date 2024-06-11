@@ -12,8 +12,10 @@ test(`Deleting the LeadID created from an API request`, async ({ SalesforceHomeP
         { type: 'Author', description: 'Ajay Michael' },
         { type: 'TestCase', description: 'Deleting the LeadID created from an API request' }
     );
+    
 
-    const userName = await getLead()
+   
+    const userName = await getLead();
     await SalesforceHomePage.appLauncher();
     await SalesforceHomePage.viewAll();
     await SalesforceHomePage.searchApp("Leads");
