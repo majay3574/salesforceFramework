@@ -21,7 +21,6 @@ export const test = baseTest.extend<salesforceFixture>({
         const sfLogin = new SalesforceLogin(page, context);
         await sfLogin.salesforceLogin(credentialConstants.USERNAME, credentialConstants.PASSWORD)
         console.log("Login is verified")
-      //await sfLogin.storeState("../logins/salesforce.json")
         await use(sfLogin);
     },
     SalesforceHomePage: async ({ page, context }, use) => {
