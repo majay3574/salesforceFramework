@@ -5,39 +5,30 @@ import { credentialConstants } from "../constants/CredentialConstants";
 
 import { SalesforceLogin } from "./salesforceLogin";
 
-export class SalesforceHomePage extends PlaywrightWrapper {
+export class SalesforceHomePage extends SalesforceLogin {
 
     static pageUrl = URLConstants.instanceURL;
-    constructor(page: Page, context: BrowserContext) {
-        super(page, context);
-        this.common(page, context);
-    }
-    public async common(page: Page, context: BrowserContext) {
+
+    public async login() {
         await this.loadApp(SalesforceHomePage.pageUrl);
-        await this.maxWait(5000)
-        let pageTitle = await this.getTitle();
-        console.log(pageTitle)
-        if (pageTitle.startsWith("Login")) {
-            const sfLogin = new SalesforceLogin(page, context);
-            await sfLogin.salesforceLogin(credentialConstants.USERNAME, credentialConstants.PASSWORD);
-            
-        }
+        this.salesforceLogin(credentialConstants.USERNAME,credentialConstants.PASSWORD);
     }
+
     public async appLauncher() {
         await this.validateElementVisibility(".slds-icon-waffle", "App Launcher")
         await this.click(".slds-icon-waffle", "App Launcher", "Button")
     }
 
-    public async viewAll(){
+    public async viewAll() {
         await this.waitForSelector('//button[text()="View All"]')
-        await this.click('//button[text()="View All"]',"View All","Button")
+        await this.click('//button[text()="View All"]', "View All", "Button")
     }
 
-    public async searchApp(value:string){
-        await this.type("one-app-launcher-modal input.slds-input","Search Field",value)
+    public async searchApp(value: string) {
+        await this.type("one-app-launcher-modal input.slds-input", "Search Field", value)
     }
 
-    public async app(value:string){
-        await this.click("//mark[text()='"+value+"']",value,"Button")
+    public async app(value: string) {
+        await this.click("//mark[text()='" + value + "']", value, "Button")
     }
 }

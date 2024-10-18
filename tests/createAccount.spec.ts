@@ -16,6 +16,7 @@ test('Creating an Account Using CSV Data', async ({ SalesforceHomePage, Salesfor
     for (const row of data) {
         const { Rating, Type, Industry, Ownership, BillingStreet, BillingCity, PostalCode, BillingState, BillingCountry } = row;
 
+        await SalesforceHomePage.login();
         await SalesforceHomePage.appLauncher();
         await SalesforceHomePage.viewAll();
         await SalesforceHomePage.searchApp("Accounts");

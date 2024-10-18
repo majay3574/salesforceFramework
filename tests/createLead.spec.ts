@@ -1,14 +1,15 @@
-import {test} from "../customFixtures/salesforceFixture"
-import {FakerData} from "../utils/fakerUtils"
+import { test } from "../customFixtures/salesforceFixture"
+import { FakerData } from "../utils/fakerUtils"
 
 let firstName = FakerData.getFirstName()
 test.use({ storageState: "logins/salesforce.json" })
-test(` creating Lead`, async ({SalesforceHomePage,SalesforceLeadPage }) => {
+test(` creating Lead`, async ({ SalesforceHomePage, SalesforceLeadPage }) => {
     test.info().annotations.push(
         { type: 'Author', description: 'Ajay Michael' },
         { type: 'TestCase', description: 'Creating Lead' },
-         );
+    );
 
+    await SalesforceHomePage.login();
     await SalesforceHomePage.appLauncher();
     await SalesforceHomePage.viewAll();
     await SalesforceHomePage.searchApp("Leads");
