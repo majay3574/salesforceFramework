@@ -10,16 +10,19 @@
   "devDependencies": {
     "@playwright/test": "^1.43.1",
     "@types/node": "^20.10.6",
+    "@zerostep/playwright": "^0.1.5",
     "allure-commandline": "^2.29.0"
   },
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
+    "@google/generative-ai": "^0.21.0",
     "allure-playwright": "^2.15.1",
     "axios": "^1.6.8",
     "csv": "^6.3.9",
     "csv-parse": "^5.5.6",
     "csv-parser": "^3.0.0",
     "jira-client": "^8.2.2",
+    "openai": "^4.68.4",
     "playwright": "^1.43.1"
   }
 }

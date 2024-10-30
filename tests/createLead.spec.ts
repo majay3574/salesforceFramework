@@ -2,7 +2,8 @@ import { test } from "../customFixtures/salesforceFixture"
 import { FakerData } from "../utils/fakerUtils"
 
 let firstName = FakerData.getFirstName()
-test.use({ storageState: "logins/salesforce.json" })
+
+//test.use({ storageState: "logins/salesforce.json" })
 test(` creating Lead`, async ({ SalesforceHomePage, SalesforceLeadPage }) => {
     test.info().annotations.push(
         { type: 'Author', description: 'Ajay Michael' },

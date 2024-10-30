@@ -1,7 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sat May 18 14:48:48 IST 2024","Sat May 18 14:49:19 IST 2024","31341","chromium","deleteLead.spec.ts","","","","Deleting the LeadID created from an API request",""
-"broken","Sat May 18 14:52:03 IST 2024","Sat May 18 14:54:54 IST 2024","170543","webkit","deleteLead.spec.ts","","","","Deleting the LeadID created from an API request",""
-"passed","Sat May 18 14:51:14 IST 2024","Sat May 18 14:52:03 IST 2024","48883","webkit","createLead.spec.ts","","","","creating Lead",""
-"passed","Sat May 18 14:48:12 IST 2024","Sat May 18 14:48:48 IST 2024","35901","chromium","createLead.spec.ts","","","","creating Lead",""
-"passed","Sat May 18 14:49:27 IST 2024","Sat May 18 14:50:14 IST 2024","47356","firefox","createLead.spec.ts","","","","creating Lead",""
-"passed","Sat May 18 14:50:14 IST 2024","Sat May 18 14:51:05 IST 2024","51257","firefox","deleteLead.spec.ts","","","","Deleting the LeadID created from an API request",""

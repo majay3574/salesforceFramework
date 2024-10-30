@@ -3,13 +3,7 @@ import { Page, test, expect, BrowserContext } from "@playwright/test";
 import * as path from 'path';
 
 
-declare module '@playwright/test' {
-    interface Page {
-        delayedFill: (selector: string, value: string) => Promise<void>;
-        clickAndDelay: (selector: string) => Promise<void>;
-    }
 
-}
 
 export abstract class PlaywrightWrapper {
 
@@ -117,14 +111,14 @@ export abstract class PlaywrightWrapper {
         const windowslength = this.page.context().pages().length;
         return windowslength;
     }
-
+/* 
     async fillwithDelay(locator: string, inputValues: string) {
         await this.page.delayedFill(locator, inputValues)
     }
 
     async clickwithDelay(locator: string) {
         await this.page.clickAndDelay(locator);
-    }
+    } */
     async switchToWindowWithTitle(windowTitle: string) {
         const [multiPage] = await Promise.all([
             this.context.waitForEvent('page'),
@@ -236,6 +230,7 @@ export abstract class PlaywrightWrapper {
             console.error(`Element with XPath "${type}" is still visible.`);
         }
     }
+    
 
 
     async validateElementVisibility(locator: any, elementName: string) {

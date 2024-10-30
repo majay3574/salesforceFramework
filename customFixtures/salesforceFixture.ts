@@ -1,22 +1,22 @@
-import { test as baseTest } from '@playwright/test'
+import { test as baseTest, Page, chromium } from '@playwright/test'
 
 import { credentialConstants } from "../constants/CredentialConstants";
 import { SalesforceLogin } from '../pages/salesforceLogin'
 import { SalesforceHomePage } from '../pages/salesforceHomePage'
 import { SalesforceLeadPage } from '../pages/salesforceLeadPage'
 import { SalesforceAccountPage } from '../pages/salesforceAccountPage';
-
+import { aiFixture, type AiFixture } from '@zerostep/playwright'
 
 
 type salesforceFixture = {
     SalesforceLogin: SalesforceLogin
     SalesforceHomePage: SalesforceHomePage
-    SalesforceLeadPage:SalesforceLeadPage
-    SalesforceAccountPage:SalesforceAccountPage
+    SalesforceLeadPage: SalesforceLeadPage
+    SalesforceAccountPage: SalesforceAccountPage
 }
 
 
-export const test = baseTest.extend<salesforceFixture>({
+export const test = baseTest.extend<salesforceFixture & AiFixture>({
     SalesforceLogin: async ({ page, context }, use) => {
         const sfLogin = new SalesforceLogin(page, context);
         await sfLogin.salesforceLogin(credentialConstants.USERNAME, credentialConstants.PASSWORD)
@@ -35,5 +35,5 @@ export const test = baseTest.extend<salesforceFixture>({
         const sfAccount = new SalesforceAccountPage(page, context)
         await use(sfAccount)
     },
-    
+    ...aiFixture(baseTest)
 })

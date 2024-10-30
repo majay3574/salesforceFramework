@@ -1,9 +1,0 @@
-Login | Salesforce
-
-App Launcher is visible as expected.
-App Launcher is visible as expected.
-New Button is visible as expected.
-Lead Name is visible as expected.
-Mr. Angelina Hackett
-Mr. Angelina Hackett
-Field value verified successfully

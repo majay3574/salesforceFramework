@@ -1,8 +1,0 @@
-Lightning Experience
-App Launcher is visible as expected.
-Home | Salesforce
-New Button is visible as expected.
-Lead Name is visible as expected.
-Mr. Lorena Beer
-Mr. Lorena Beer
-Field value verified successfully
